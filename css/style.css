@@ -16,3 +16,16 @@
 .bi {
   font-size: 1.5rem; /* Adjust the size of the icon */
 }
+
+.container{
+  display: flex;
+  gap: 10px;
+}
+
+.custom-nav-color .nav-link{
+  color: white !important;
+}
+
+#about h1.display-5 {
+  color: white !important;
+}
