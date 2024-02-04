@@ -144,32 +144,43 @@
       </div>
     </section>
     <div class="mb-5"></div>
-    <!-- Contact Form Section -->
+    
     <section id="contact">
       <div class="container">
         <hr width="100%" class="bg-white text-center" />
         <h5 class="text-center text-white">Contact</h5>
         <hr width="100%" class="text-center bg-white" />
-          <form method="POST" action="{{ url_for('home') }}">
-              {{ form.hidden_tag() }}
-              <div class="form-group">
-                  {{ form.name.label }} 
-                  {{ form.name(class_='form-control') }}
-              </div>
-              <div class="form-group">
-                  {{ form.email.label }}
-                  {{ form.email(class_='form-control') }}
-              </div>
-              <div class="form-group">
-                  {{ form.message.label }}
-                  {{ form.message(class_='form-control') }}
-              </div>
-              <div class="form-group">
-                  {{ form.submit(class_='btn btn-primary') }}
-              </div>
-          </form>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="text-white">Leave a message for me &rarr;</h3>
+            <br />
+          </div>
+          
+          <div class="col-md-6">
+            <form method="POST" action="{{ url_for('home') }}">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.name.label }} 
+                    {{ form.name(class_='form-control') }}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label }}
+                    {{ form.email(class_='form-control') }}
+                </div>
+                <div class="form-group">
+                    {{ form.message.label }}
+                    {{ form.message(class_='form-control') }}
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class_='btn btn-outline-light') }}
+                </div>
+            </form>
+          </div>
+        </div>
       </div>
-  </section>
+    </section>
+    
   </div>
   <hr class="mt-5 bg-white" />
   </div>
