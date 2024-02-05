@@ -1,19 +1,21 @@
-# main.py
-
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Email
 from flask_mail import Mail, Message
+import os
+from dotenv import load_dotenv
+
+load_dotenv(".env")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'
-app.config['MAIL_SERVER'] = 'smtp.example.com'
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'your_email@example.com'
-app.config['MAIL_PASSWORD'] = 'your_password'
-app.config['MAIL_DEFAULT_SENDER'] = 'your_email@example.com'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
 
 mail = Mail(app)
 
@@ -27,7 +29,6 @@ class ContactForm(FlaskForm):
 def home():
     form = ContactForm()
     if form.validate_on_submit():
-        # Send the email
         msg = Message("New Contact Form Submission",
                       recipients=['your_recipient_email@example.com'])
         msg.body = f"""
