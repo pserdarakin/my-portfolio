@@ -1,38 +1,6 @@
-absl-py==1.4.0
-attrs==21.2.0  # Example version, replace with the correct version you need
-blinker==1.7.0
-cachetools==5.3.1
-certifi==2022.5.18.1  # Example version, replace with the correct version you need
-cffi==1.15.0  # Example version, replace with the correct version you need
-click==8.1.7
-cryptography==37.0.2  # Example version, replace with the correct version you need
-dnspython==2.5.0
-email-validator==2.1.0.post1
-Flask==3.0.0
-Flask-Login==0.6.3
+Flask==2.1.2
+Flask-WTF==1.0.0
 Flask-Mail==0.9.1
-Flask-SQLAlchemy==3.1.1
-Flask-WTF==1.2.1
-google-auth==2.22.0
-google-auth-oauthlib==1.0.0
-grpcio==1.56.2
-idna==3.3  # Example version, replace with the correct version you need
-itsdangerous==2.1.2
-Jinja2==3.1.2  # Example version, replace with the correct version you need
-Markdown==3.4.4
-MarkupSafe==2.1.1  # Example version, replace with the correct version you need
-numpy==1.25.2
-oauthlib==3.2.2
-protobuf==4.23.4
-python-dateutil==2.8.2  # Example version, replace with the correct version you need
-python-dotenv==1.0.1
-PyYAML==6.0  # Example version, replace with the correct version you need
-requests==2.28.1  # Example version, replace with the correct version you need
-requests-oauthlib==1.3.1
-rsa==4.9
-SQLAlchemy==2.0.25
-tensorboard==2.13.0
-tensorboard-data-server==0.7.1
-urllib3==1.26.9  # Example version, replace with the correct version you need
-Werkzeug==3.0.1
-WTForms==3.1.2
+python-dotenv==0.20.0
+gunicorn==20.1.0
+WTForms==3.0.1
