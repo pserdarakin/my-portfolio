@@ -133,3 +133,25 @@ h1, .developer-name {
   stroke: #ffffff; 
 
 }
+
+/* Adjustments for all screen sizes */
+.nav-link, .nav-pills .nav-link {
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+  }
+
+  .col-auto, .nav-pills {
+      flex-grow: 1;
+      justify-content: space-between;
+  }
+
+  .nav-item {
+      margin: 0 5px;
+  }
+}
